@@ -13,7 +13,7 @@
 }
 
 .content {
-    padding: 2em;
+    padding-left: 10em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -67,5 +67,14 @@
     }
     .designed {
         font-size: 1em;
+    }
+}
+
+@media(max-width: 1000px) {
+    .app {
+        justify-content: center;
+    }
+    .content {
+        padding: 0;
     }
 }
