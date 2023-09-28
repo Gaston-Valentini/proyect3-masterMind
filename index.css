@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+}
+
+.app {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url("./images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-position: left;
+}
+
+.content {
+    padding-left: 10em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+}
+
+.title {
+    font-size: 6em;
+    font-family: 'Tourney', cursive;
+    color: #fbff00;
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 4em;
+}
+
+.buttonsPlay, .buttonsAbout {
+    padding: 0.5em;
+    font-size: 2em;
+    border: 0.2em solid #fbff00;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.buttonsPlay:hover, .buttonsAbout:hover {
+    cursor: pointer;
+    background-color: #fbff00;
+}
+
+.designed {
+    font-size: 1.5em;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+}
+
+.designed a {
+    color: #fbff00;
+}
+
+@media(max-width: 720px) {
+    .title {
+        font-size: 3em;
+    }
+    .buttons {
+        gap: 2em;
+    }
+    .buttonsPlay, .buttonsAbout {
+        font-size: 1.2em;
+    }
+    .designed {
+        font-size: 1em;
+    }
+}
+
+@media(max-width: 1000px) {
+    .app {
+        justify-content: center;
+    }
+    .content {
+        padding: 0;
+    }
+}
