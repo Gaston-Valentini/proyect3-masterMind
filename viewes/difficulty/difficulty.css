@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+}
+
+.app {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top right, #91C0DA, #6B6DE4, #AD8BA4);
+}
+
+.contain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6em;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.name {
+    display: flex;
+}
+
+.nameTitle {
+    font-size: 2em;
+    text-align: center;
+}
+
+.nameInput {
+    background-color: transparent;
+    border: none;
+    font-size: 2em;
+    font-family: 'Press Start 2P', cursive;
+    color: #fbff00;
+    text-shadow: 1px 1px 2px black;
+}
+
+.nameInput:focus {
+    outline: none;
+}
+
+.nameInput::placeholder {
+    color: #bdbdbd;
+}
+
+.difficulty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+}
+
+.difficultyTitle {
+    font-size: 2em;
+    text-align: center;
+}
+
+.difficultyButtons {
+    display: flex;
+    gap: 3em;
+}
+
+.silly, .smart, .prodigy, .x-rays {
+    padding: 1em;
+    border: 0.3em solid #fbff00;
+}
+
+.silly:hover, .smart:hover, .prodigy:hover {
+    cursor: pointer;
+    background-color: #fbff00;
+}
+
+.x-rays {
+    color: #d10e0e;
+    border: 0.3em solid #d10e0e;
+}
+
+.x-rays:hover {
+    cursor: pointer;
+    background-color: #d10e0e;
+    color: #000;
+}
+
+.play {
+    font-size: 2em;
+    color: #fbff00;
+}
+
+.play:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+@media(max-width: 1100px) {
+    .contain {
+        gap: 3em;
+    }
+    .nameTitle, .nameInput, .nameInput::placeholder, .difficultyTitle {
+        font-size: 1em;
+    }
+
+    .silly, .smart, .prodigy, .x-rays {
+        padding: 0.8em;
+        font-size: 0.8em;
+    }
+}
+
+@media(max-width: 720px) {
+    .name {
+        flex-direction: column;
+        gap: 1em;
+    }
+    .nameTitle, .nameInput, .nameInput::placeholder, .difficultyTitle {
+        font-size: 1em;
+    }
+
+    .nameInput {
+        text-align: center;
+    }
+
+    .difficulty {
+        gap: 1em;
+    }
+
+    .difficultyButtons {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .silly, .smart, .prodigy, .x-rays {
+        padding: 0.8em;
+        font-size: 0.8em;
+    }
+}
