@@ -24,6 +24,7 @@
     font-size: 6em;
     font-family: 'Tourney', cursive;
     color: #fbff00;
+    text-shadow: 1px 1px 2px black;
     text-align: center;
 }
 
@@ -38,6 +39,8 @@
     font-size: 2em;
     border: 0.2em solid #fbff00;
     font-family: 'Press Start 2P', cursive;
+    color: #000;
+    text-decoration: none;
 }
 
 .buttonsPlay:hover, .buttonsAbout:hover {
@@ -53,6 +56,7 @@
 
 .designed a {
     color: #fbff00;
+    text-shadow: 1px 1px 2px black;
 }
 
 @media(max-width: 720px) {
