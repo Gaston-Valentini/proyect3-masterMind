@@ -18,16 +18,16 @@
     font-family: 'Press Start 2P', cursive;
 }
 
-.name {
+.nickname {
     display: flex;
 }
 
-.nameTitle {
+.nicknameTitle {
     font-size: 2em;
     text-align: center;
 }
 
-.nameInput {
+.nicknameInput {
     background-color: transparent;
     border: none;
     font-size: 2em;
@@ -36,11 +36,11 @@
     text-shadow: 1px 1px 2px black;
 }
 
-.nameInput:focus {
+.nicknameInput:focus {
     outline: none;
 }
 
-.nameInput::placeholder {
+.nicknameInput::placeholder {
     color: #bdbdbd;
 }
 
@@ -82,12 +82,12 @@
     color: #000;
 }
 
-.play {
+.next {
     font-size: 2em;
     color: #fbff00;
 }
 
-.play:hover {
+.next:hover {
     cursor: pointer;
     text-decoration: underline;
 }
@@ -96,7 +96,7 @@
     .contain {
         gap: 3em;
     }
-    .nameTitle, .nameInput, .nameInput::placeholder, .difficultyTitle {
+    .nicknameTitle, .nicknameInput, .nicknameInput::placeholder, .difficultyTitle {
         font-size: 1em;
     }
 
@@ -107,15 +107,15 @@
 }
 
 @media(max-width: 720px) {
-    .name {
+    .nickname {
         flex-direction: column;
         gap: 1em;
     }
-    .nameTitle, .nameInput, .nameInput::placeholder, .difficultyTitle {
+    .nicknameTitle, .nicknameInput, .nicknameInput::placeholder, .difficultyTitle {
         font-size: 1em;
     }
 
-    .nameInput {
+    .nicknameInput {
         text-align: center;
     }
 
