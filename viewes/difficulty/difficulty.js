@@ -13,6 +13,12 @@ const next = document.querySelector(".next")
 difficults.forEach(button => {
     button.addEventListener("click", (e) => {
         difficulty = e.target.innerHTML
+        button.classList.toggle("selected")
+        difficults.forEach(button2=> {
+            if (button2.classList.contains("selected") && (button2.innerHTML !== difficulty)) {
+                button2.classList.remove("selected")
+            }
+        })
     })
 })
 

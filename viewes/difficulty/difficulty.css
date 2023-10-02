@@ -78,8 +78,11 @@
 
 .x-rays:hover {
     cursor: pointer;
-    background-color: #d10e0e;
-    color: #000;
+    background-color: #fbff00;
+}
+
+.selected {
+    background-color: #fbff00;
 }
 
 .next {
