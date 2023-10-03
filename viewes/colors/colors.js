@@ -54,6 +54,8 @@ switch (difficulty) {
 }
 
 colorsDelete.addEventListener("click", () => {
-    let last = colorsSelection.lastElementChild
-    colorsOptions.appendChild(last)
+    if (colorsSelection.childElementCount > 0) {
+        let last = colorsSelection.lastElementChild
+        colorsOptions.appendChild(last)
+    }
 })
