@@ -1,3 +1,4 @@
+let nickname = localStorage.getItem("nickname")
 let difficulty = localStorage.getItem("difficulty")
 
 let colorsSelection = document.querySelector(".colorsSelection")
@@ -8,6 +9,8 @@ let quantity = document.querySelector(".quantity")
 
 let colorsOptions = document.querySelector(".colorsOptions")
 let colorsOptionsColors = document.querySelectorAll(".colorsOptionsColor")
+
+let colorsPlay = document.querySelector(".colorsPlay")
 
 switch (difficulty) {
     case "Silly":
@@ -58,4 +61,15 @@ colorsDelete.addEventListener("click", () => {
         let last = colorsSelection.lastElementChild
         colorsOptions.appendChild(last)
     }
+})
+
+colorsPlay.addEventListener("click", () => {
+    localStorage.clear()
+    localStorage.setItem("info", {
+        nickname,
+        difficulty,
+        quantity,
+        colorsSelection
+    })
+    window.location.href = "../play/play.html"
 })
