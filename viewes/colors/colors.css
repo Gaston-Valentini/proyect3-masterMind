@@ -46,6 +46,11 @@
     border: 2px solid black;
 }
 
+.colorsOptionsColor:hover {
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+
 .color1 {
     background-color: rgb(0, 128, 128);
 }
@@ -55,7 +60,7 @@
 }
   
 .color3 {
-    background-color: rgb(218, 112, 214);
+    background-color: rgb(255, 91, 250);
 }
   
 .color4 {
@@ -67,7 +72,7 @@
 }
 
 .color6 {
-    background-color: rgb(160, 82, 45);
+    background-color: rgb(93, 205, 233);
 }
   
 .color7 {
@@ -75,15 +80,15 @@
 }
   
 .color8 {
-    background-color: rgb(128, 128, 0);
+    background-color: rgb(97, 172, 0);
 }
   
 .color9 {
-    background-color: rgb(250, 128, 114);
+    background-color: rgb(209, 62, 46);
 }
   
 .color10 {
-    background-color: rgb(112, 128, 144);
+    background-color: rgb(80, 80, 80);
 }
 
 .colorsPlay {
