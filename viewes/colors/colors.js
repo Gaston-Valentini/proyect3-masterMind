@@ -72,11 +72,11 @@ colorsPlay.addEventListener("click", () => {
         colors.push(window.getComputedStyle(e).backgroundColor)
     })
 
-    localStorage.setItem("info", {
+    localStorage.setItem("info", JSON.stringify({
         nickname,
         difficulty,
         quantity,
         colors
-    })
+    }))
     window.location.href = "../play/play.html"
 })

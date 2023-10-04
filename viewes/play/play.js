@@ -1,2 +1,2 @@
-let info = JSON.parse(localStorage.getItem("info"))
+let info = localStorage.getItem("info")
 console.log(info)
