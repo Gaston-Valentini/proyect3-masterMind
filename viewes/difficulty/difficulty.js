@@ -1,14 +1,14 @@
-const nickname = document.querySelector(".nicknameInput")
+let nickname = document.querySelector(".nicknameInput")
 
-const silly = document.querySelector(".silly")
-const smart = document.querySelector(".smart")
-const prodigy = document.querySelector(".prodigy")
-const xray = document.querySelector(".x-ray")
+let silly = document.querySelector(".silly")
+let smart = document.querySelector(".smart")
+let prodigy = document.querySelector(".prodigy")
+let xray = document.querySelector(".x-ray")
 
-const difficults = document.querySelectorAll(".difficultyButtonsButton")
+let difficults = document.querySelectorAll(".difficultyButtonsButton")
 let difficulty
 
-const next = document.querySelector(".next")
+let next = document.querySelector(".next")
 
 difficults.forEach(button => {
     button.addEventListener("click", (e) => {
