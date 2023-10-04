@@ -65,11 +65,18 @@ colorsDelete.addEventListener("click", () => {
 
 colorsPlay.addEventListener("click", () => {
     localStorage.clear()
+
+    let colors = []
+    const colorsSelectionToExport = colorsSelection.querySelectorAll("div")
+    colorsSelectionToExport.forEach(e => {
+        colors.push(window.getComputedStyle(e).backgroundColor)
+    })
+
     localStorage.setItem("info", {
         nickname,
         difficulty,
         quantity,
-        colorsSelection
+        colors
     })
     window.location.href = "../play/play.html"
 })
