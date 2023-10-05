@@ -10,8 +10,14 @@
     background: linear-gradient(to top right, #91C0DA, #6B6DE4, #AD8BA4);
 }
 
+.game {
+    background-color: red;
+    padding: 20px;
+}
+
 .colorPicker {
     background-color: rebeccapurple;
+    display: flex;
 }
 
 .colorPickerButton {
@@ -21,4 +27,33 @@
 
 .board {
     background-color: red;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.boardRow {
+    background-color: #6B6DE4;
+    display: flex;
+}
+
+.boardRowSelection {
+    background-color: #AD8BA4;
+    display: flex;
+}
+
+.boardRowSelectionColor {
+    outline: 1px solid black;
+    height: 20px;
+    width: 20px;
+}
+
+.boardRowComprobation {
+    display: flex;
+}
+
+.boardRowComprobationColor {
+    outline: 1px solid black;
+    width: 20px;
+    height: 20px;
 }

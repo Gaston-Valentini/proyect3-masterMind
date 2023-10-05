@@ -1,5 +1,6 @@
 let nickname = localStorage.getItem("nickname")
 let difficulty = localStorage.getItem("difficulty")
+let difficultyNum
 
 let colorsSelection = document.querySelector(".colorsSelection")
 
@@ -15,6 +16,7 @@ let colorsPlay = document.querySelector(".colorsPlay")
 switch (difficulty) {
     case "Silly":
         quantity.innerHTML = "4"
+        difficultyNum = 10
         colorsOptionsColors.forEach(button => {
             button.addEventListener("click", () => {
                 if (colorsSelection.childElementCount < 4)
@@ -24,6 +26,7 @@ switch (difficulty) {
         break;
     case "Smart":
         quantity.innerHTML = "5"
+        difficultyNum = 8
         colorsOptionsColors.forEach(button => {
             button.addEventListener("click", () => {
                 if (colorsSelection.childElementCount < 5) {
@@ -34,6 +37,7 @@ switch (difficulty) {
         break;
     case "Prodigy":
         quantity.innerHTML = "6"
+        difficultyNum = 6
         colorsOptionsColors.forEach(button => {
             button.addEventListener("click", () => {
                 if (colorsSelection.childElementCount < 6) {
@@ -44,6 +48,7 @@ switch (difficulty) {
         break;
     case "X-RAYS":
         quantity.innerHTML = "8"
+        difficultyNum = 1
         colorsOptionsColors.forEach(button => {
             button.addEventListener("click", () => {
                 if (colorsSelection.childElementCount < 8) {
@@ -75,7 +80,8 @@ colorsPlay.addEventListener("click", () => {
     localStorage.setItem("info", JSON.stringify({
         nickname,
         difficulty,
-        quantity,
+        difficultyNum,
+        quantity: quantity.innerHTML,
         colors
     }))
     window.location.href = "../play/play.html"
