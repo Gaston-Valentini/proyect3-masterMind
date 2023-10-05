@@ -11,49 +11,85 @@
 }
 
 .game {
-    background-color: red;
-    padding: 20px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    background-color: #1f1f1f59;
+    border: 2px solid #fbff00;
+    box-shadow: 0 0 3px 1px #000;
 }
 
 .colorPicker {
-    background-color: rebeccapurple;
     display: flex;
+    justify-content: center;
+    gap: 1em;
 }
 
 .colorPickerButton {
-    height: 20px;
-    width: 20px;
+    height: 2em;
+    width: 2em;
+    border: 2px solid #000;
+}
+
+.colorPickerButton:hover {
+    border: 2px solid #fff;
+    box-shadow: 0 0 3px #fff;
+    cursor: pointer;
 }
 
 .board {
-    background-color: red;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    align-items: center;
+    gap: 1em;
 }
 
 .boardRow {
-    background-color: #6B6DE4;
+    padding: 0.5em;
     display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    background-color: #ffffff8f;
 }
 
 .boardRowSelection {
-    background-color: #AD8BA4;
     display: flex;
+    gap: 0.5em;
 }
 
 .boardRowSelectionColor {
-    outline: 1px solid black;
-    height: 20px;
-    width: 20px;
+    height: 2em;
+    width: 2em;
+    outline: 2px solid #000;
 }
 
 .boardRowComprobation {
     display: flex;
+    justify-content: space-around;
+    gap: 0.5em;
 }
 
 .boardRowComprobationColor {
-    outline: 1px solid black;
-    width: 20px;
-    height: 20px;
+    height: 1em;
+    width: 1em;
+    outline: 2px solid #000;
+    border-radius: 50%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.check, .delete {
+    padding: 0.5em;
+    border: 2px solid #fbff00;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.check:hover, .delete:hover {
+    cursor: pointer;
+    background-color: #fbff00;
 }

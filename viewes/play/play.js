@@ -1,7 +1,7 @@
 let colors = JSON.parse(localStorage.getItem("info")).colors
 let difficulty = JSON.parse(localStorage.getItem("info")).difficulty
 let difficultyNum = JSON.parse(localStorage.getItem("info")).difficultyNum
-console.log(difficultyNum)
+
 let colorPicker = document.querySelector(".colorPicker")
 let board = document.querySelector(".board")
 
