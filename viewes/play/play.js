@@ -3,6 +3,12 @@ let difficulty = JSON.parse(localStorage.getItem("info")).difficulty
 let difficultyNum = JSON.parse(localStorage.getItem("info")).difficultyNum
 let quantity = JSON.parse(localStorage.getItem("info")).quantity
 
+let winnerCombination = []
+
+for (let i = 0; i < quantity; i++) {
+    winnerCombination.push(colors[Math.floor(Math.random() * colors.length)])
+}
+
 let colorPicker = document.querySelector(".colorPicker")
 let board = document.querySelector(".board")
 
