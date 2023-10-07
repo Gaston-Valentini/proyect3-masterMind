@@ -72,3 +72,10 @@ remove.addEventListener("click", () => {
         }
     }
 })
+
+let check = document.querySelector(".check")
+check.addEventListener("click", () => {
+    actualRowId++
+    actualColorNum = 0
+    check.setAttribute("disabled", "true");
+})
