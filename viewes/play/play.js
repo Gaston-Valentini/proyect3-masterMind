@@ -4,6 +4,7 @@ let difficultyNum = JSON.parse(localStorage.getItem("info")).difficultyNum
 let quantity = JSON.parse(localStorage.getItem("info")).quantity
 
 let winnerCombination = []
+let userCombination = []
 
 for (let i = 0; i < quantity; i++) {
     winnerCombination.push(colors[Math.floor(Math.random() * colors.length)])
@@ -57,7 +58,6 @@ colorPickerButtons.forEach(button => button.addEventListener("click", (e) => {
     let actualSelectorColor = actualSelector.querySelectorAll("div")[actualColorNum]
     if ((actualColorNum < quantity) && (actualSelectorColor.style.backgroundColor === "")) {
         actualSelectorColor.style.backgroundColor = e.target.style.backgroundColor
-        console.log(actualSelectorColor.style.backgroundColor)
         actualColorNum++
         if (actualColorNum == quantity) {
             check.removeAttribute("disabled");
@@ -81,7 +81,31 @@ remove.addEventListener("click", () => {
 
 let check = document.querySelector(".check")
 check.addEventListener("click", () => {
-    actualRowId++
-    actualColorNum = 0
-    check.setAttribute("disabled", "true");
+
+    let actualRow = document.getElementById(actualRowId)
+    let actualSelector = actualRow.querySelectorAll(".boardRowSelectionColor")
+
+    for (let i = 0; i < actualSelector.length; i++) {
+        let actualSelectorColor = actualSelector[i]
+        userCombination.push(actualSelectorColor.style.backgroundColor)
+    }
+
+    const areArraysEqual = (arr1, arr2)  => {
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i] !== arr2[i]) {
+                userCombination = []
+                return false;
+            }
+        }
+        return true;
+    }
+
+    if (areArraysEqual(winnerCombination, userCombination)) {
+        window.location.href = "../../index.html"
+    } else {
+        actualRowId++
+        actualColorNum = 0
+        check.setAttribute("disabled", "true");
+    }
+
 })
