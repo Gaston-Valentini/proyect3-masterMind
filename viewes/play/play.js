@@ -58,3 +58,17 @@ colorPickerButtons.forEach(button => button.addEventListener("click", (e) => {
         }
     }
 }))
+
+let remove = document.querySelector(".remove")
+remove.addEventListener("click", () => {
+    let actualRow = document.getElementById(actualRowId)
+    let actualSelector = actualRow.querySelectorAll("div")[0]
+    let actualSelectorColor = actualSelector.querySelectorAll("div")[actualColorNum - 1]
+    if (actualColorNum > 0) {
+        actualSelectorColor.style.backgroundColor = ""
+        actualColorNum--
+        if (actualColorNum != quantity) {
+            check.setAttribute("disabled", "true");
+        }
+    }
+})
