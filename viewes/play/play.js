@@ -13,9 +13,10 @@ colors.forEach(e => {
     colorPicker.appendChild(colorPickerButton)
 });
 
-const createRow = () => {
+const createRow = (id) => {
     let boardRow = document.createElement("div")
     boardRow.classList.add("boardRow")
+    boardRow.id = id
     let boardRowSelection = document.createElement("div")
     boardRowSelection.classList.add("boardRowSelection")
     let boardRowComprobation = document.createElement("boardRowComprobation")
@@ -37,5 +38,23 @@ const createRow = () => {
 }
 
 for (let i = 0; i < difficultyNum; i++) {
-    createRow()
+    createRow(i)
 }
+
+let actualRowId = 0
+let actualColorNum = 0
+
+let colorPickerButtons = document.querySelectorAll(".colorPickerButton")
+colorPickerButtons.forEach(button => button.addEventListener("click", (e) => {
+    let actualRow = document.getElementById(actualRowId)
+    let actualSelector = actualRow.querySelectorAll("div")[0]
+    let actualSelectorColor = actualSelector.querySelectorAll("div")[actualColorNum]
+    if ((actualColorNum < quantity) && (actualSelectorColor.style.backgroundColor === "")) {
+        actualSelectorColor.style.backgroundColor = e.target.style.backgroundColor
+        console.log(actualSelectorColor.style.backgroundColor)
+        actualColorNum++
+        if (actualColorNum == quantity) {
+            check.removeAttribute("disabled");
+        }
+    }
+}))
