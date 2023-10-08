@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+}
+
+.app {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top right, #91C0DA, #6B6DE4, #AD8BA4);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+.victory {
+    font-size: 6em;
+    font-family: 'Tourney', cursive;
+    color: #fbff00;
+    text-shadow: 1px 1px 2px black;
+}
+
+.text {
+    max-width: 50em;
+    padding: 0 2em;
+    text-align: center;
+    line-height: 1.3em;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.stadistics {
+    font-family: 'Press Start 2P', cursive;
+    line-height: 1.3em;
+    color: #fbff00;
+    text-shadow: 1px 1px 2px black;
+}
+
+.stadistics span {
+    color: #000;
+    text-shadow: none;
+}
+
+.playAgain {
+    padding: 0.5em;
+    border: 0.2em solid #fbff00;
+    font-family: 'Press Start 2P', cursive;
+    color: #000;
+    text-decoration: none;
+}
+
+.playAgain:hover {
+    cursor: pointer;
+    background-color: #fbff00;
+}

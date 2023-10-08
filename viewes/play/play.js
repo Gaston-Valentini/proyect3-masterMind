@@ -1,7 +1,13 @@
-let colors = JSON.parse(localStorage.getItem("info")).colors
-let difficulty = JSON.parse(localStorage.getItem("info")).difficulty
-let difficultyNum = JSON.parse(localStorage.getItem("info")).difficultyNum
-let quantity = JSON.parse(localStorage.getItem("info")).quantity
+let colors = JSON.parse(localStorage.getItem("colors"))
+let difficulty = JSON.parse(localStorage.getItem("difficulty"))
+let difficultyNum = JSON.parse(localStorage.getItem("difficultyNum"))
+let quantity = JSON.parse(localStorage.getItem("quantity"))
+let timeStart = new Date()
+window.addEventListener("beforeunload", () => {
+    let timeEnd = new Date()
+    let gameTime = timeEnd - timeStart
+    localStorage.setItem("gameTime", gameTime) 
+})
 
 let winnerCombination = []
 let userCombination = []
@@ -102,10 +108,13 @@ check.addEventListener("click", () => {
     }
 
     if (areArraysEqual(winnerCombination, userCombination)) {
+        localStorage.setItem("attempts", actualRowId + 1)
         window.location.href = "../gameOver/gameOverWinner.html"
     } else if (actualRowId + 1 == difficultyNum) {
+        localStorage.setItem("attempts", actualRowId + 1)
         window.location.href = "../gameOver/gameOverLoser.html"
     } else {
+        localStorage.setItem("attempts", actualRowId + 1)
         for (let i = 0; i < quantity; i++) {
             if (actualSelectors[i].style.backgroundColor === winnerCombination[i]) {
                 actualComprobations[i].style.backgroundColor = "rgb(0,0,0)"
