@@ -83,10 +83,11 @@ let check = document.querySelector(".check")
 check.addEventListener("click", () => {
 
     let actualRow = document.getElementById(actualRowId)
-    let actualSelector = actualRow.querySelectorAll(".boardRowSelectionColor")
+    let actualSelectors = actualRow.querySelectorAll(".boardRowSelectionColor")
+    let actualComprobations = actualRow.querySelectorAll(".boardRowComprobationColor")
 
-    for (let i = 0; i < actualSelector.length; i++) {
-        let actualSelectorColor = actualSelector[i]
+    for (let i = 0; i < actualSelectors.length; i++) {
+        let actualSelectorColor = actualSelectors[i]
         userCombination.push(actualSelectorColor.style.backgroundColor)
     }
 
@@ -103,6 +104,14 @@ check.addEventListener("click", () => {
     if (areArraysEqual(winnerCombination, userCombination)) {
         window.location.href = "../../index.html"
     } else {
+        for (let i = 0; i < quantity; i++) {
+            if (actualSelectors[i].style.backgroundColor === winnerCombination[i]) {
+                actualComprobations[i].style.backgroundColor = "rgb(0,0,0)"
+            } else if (winnerCombination.includes(actualSelectors[i].style.backgroundColor)) {
+                actualComprobations[i].style.backgroundColor = "rgb(255,255,255)"
+            }
+        }
+
         actualRowId++
         actualColorNum = 0
         check.setAttribute("disabled", "true");
