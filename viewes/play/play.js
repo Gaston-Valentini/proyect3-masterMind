@@ -102,7 +102,9 @@ check.addEventListener("click", () => {
     }
 
     if (areArraysEqual(winnerCombination, userCombination)) {
-        window.location.href = "../gameOver/gameOver.html"
+        window.location.href = "../gameOver/gameOverWinner.html"
+    } else if (actualRowId + 1 == difficultyNum) {
+        window.location.href = "../gameOver/gameOverLoser.html"
     } else {
         for (let i = 0; i < quantity; i++) {
             if (actualSelectors[i].style.backgroundColor === winnerCombination[i]) {
