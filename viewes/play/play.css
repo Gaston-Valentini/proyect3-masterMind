@@ -94,3 +94,10 @@
     cursor: pointer;
     background-color: #fbff00;
 }
+
+@media(max-width: 770px) {
+    .app {
+        height: 100%;
+        padding: 4em 0;
+    }
+}
