@@ -47,7 +47,7 @@ switch (difficulty) {
         break;
     case "X-RAYS":
         quantity.innerHTML = "8"
-        difficultyNum = 1
+        difficultyNum = 4
         colorsOptionsColors.forEach(button => {
             button.addEventListener("click", () => {
                 if (colorsSelection.childElementCount < 8) {
