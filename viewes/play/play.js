@@ -1,3 +1,19 @@
+const music = document.getElementById('music')
+music.volume = 0.5
+music.addEventListener('canplaythrough', () => {});
+
+let hover = new Audio
+hover.src = "../../audio/hover.mp3"
+
+let buttonsArray = document.querySelector(".buttons")
+let buttons = buttonsArray.querySelectorAll("button")
+buttons.forEach(button => {
+    button.addEventListener("mouseenter", () => {
+        hover.currentTime = 0.285
+        hover.play()
+    })
+})
+
 let colors = JSON.parse(localStorage.getItem("colors"))
 let difficulty = JSON.parse(localStorage.getItem("difficulty"))
 let difficultyNum = JSON.parse(localStorage.getItem("difficultyNum"))
@@ -129,5 +145,3 @@ check.addEventListener("click", () => {
     }
 
 })
-
-console.log(localStorage);

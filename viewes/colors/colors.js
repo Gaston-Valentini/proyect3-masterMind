@@ -1,3 +1,35 @@
+const music = document.getElementById('music')
+music.volume = 0.5
+music.addEventListener('canplaythrough', () => {});
+
+let hover = new Audio
+hover.src = "../../audio/hover.mp3"
+let select = new Audio
+select.src = "../../audio/select.mp3"
+let remove = new Audio
+remove.src = "../../audio/remove.mp3"
+
+let colorsOptionsArraySound = document.querySelector(".colorsOptions")
+let colorsOptionsSound = colorsOptionsArraySound.querySelectorAll("div")
+colorsOptionsSound.forEach(button => {
+    button.addEventListener("mouseenter", () => {
+        hover.currentTime = 0.285
+        hover.play()
+    })
+})
+
+colorsOptionsSound.forEach(button => {
+    button.addEventListener("click", () => {
+        select.currentTime = 0.12
+        select.play()
+    })
+})
+
+let colorsDeleteSound = document.querySelector(".colorsDelete")
+colorsDeleteSound.addEventListener("click", () => {
+    remove.play()
+})
+
 let nickname = localStorage.getItem("nickname")
 let difficulty = localStorage.getItem("difficulty")
 let difficultyNum
@@ -68,6 +100,7 @@ colorsDelete.addEventListener("click", () => {
 })
 
 colorsPlay.addEventListener("click", () => {
+
     let colors = []
     const colorsSelectionToExport = colorsSelection.querySelectorAll("div")
     colorsSelectionToExport.forEach(e => {
