@@ -1,12 +1,11 @@
 let nickname = localStorage.getItem("nickname")
 let difficulty = localStorage.getItem("difficulty")
 let difficultyNum
+let quantity = document.querySelector(".quantity")
 
 let colorsSelection = document.querySelector(".colorsSelection")
 
 let colorsDelete = document.querySelector(".colorsDelete")
-
-let quantity = document.querySelector(".quantity")
 
 let colorsOptions = document.querySelector(".colorsOptions")
 let colorsOptionsColors = document.querySelectorAll(".colorsOptionsColor")
@@ -75,13 +74,18 @@ colorsPlay.addEventListener("click", () => {
         colors.push(window.getComputedStyle(e).backgroundColor)
     })
 
-    localStorage.setItem("nickname", JSON.stringify(nickname))
-    localStorage.setItem("difficulty", JSON.stringify(difficulty))
-    localStorage.setItem("difficultyNum", JSON.stringify(difficultyNum))
-    localStorage.setItem("quantity", JSON.stringify(quantity.innerHTML))
-    localStorage.setItem("colors", JSON.stringify(colors))
-    
-    window.location.href = "../play/play.html"
+    if (quantity.innerHTML == colorsSelectionToExport.length) {
+        localStorage.setItem("nickname", JSON.stringify(nickname))
+        localStorage.setItem("difficulty", JSON.stringify(difficulty))
+        localStorage.setItem("difficultyNum", JSON.stringify(difficultyNum))
+        localStorage.setItem("quantity", JSON.stringify(quantity.innerHTML))
+        localStorage.setItem("colors", JSON.stringify(colors))
+        
+        window.location.href = "../play/play.html"
+    } else {
+        alert(`You must choose ${quantity.innerHTML} colors.`)
+    }
+
 })
 
 console.log(localStorage);
