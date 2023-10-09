@@ -28,3 +28,5 @@ let stadisticsDifficulty = document.querySelector(".stadisticsDifficulty")
 stadisticsDifficulty.innerHTML = difficulty.replace(/["']/g, "")
 let stadisticsAttempts = document.querySelector(".stadisticsAttempts")
 stadisticsAttempts.innerHTML = attempts
+
+console.log(localStorage);

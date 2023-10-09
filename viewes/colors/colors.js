@@ -83,3 +83,5 @@ colorsPlay.addEventListener("click", () => {
     
     window.location.href = "../play/play.html"
 })
+
+console.log(localStorage);

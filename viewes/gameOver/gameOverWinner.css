@@ -56,3 +56,9 @@
     cursor: pointer;
     background-color: #fbff00;
 }
+
+@media(max-width: 720px) {
+    .victory {
+        font-size: 3em;
+    }
+}

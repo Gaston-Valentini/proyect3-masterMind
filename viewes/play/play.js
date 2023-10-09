@@ -129,3 +129,5 @@ check.addEventListener("click", () => {
     }
 
 })
+
+console.log(localStorage);

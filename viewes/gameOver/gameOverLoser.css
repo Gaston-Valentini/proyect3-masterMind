@@ -44,3 +44,9 @@
     cursor: pointer;
     background-color: #fbff00;
 }
+
+@media(max-width: 720px) {
+    .defeat {
+        font-size: 3em;
+    }
+}
