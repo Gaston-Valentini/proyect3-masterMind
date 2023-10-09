@@ -1,3 +1,18 @@
+const music = document.getElementById('music')
+music.volume = 0.5
+music.addEventListener('canplaythrough', () => {});
+
+let hover = new Audio
+hover.src = "../../audio/hover.mp3"
+let difficultyButtonsArraySound = document.querySelector(".difficultyButtons")
+let difficultyButtonsSound = difficultyButtonsArraySound.querySelectorAll("div")
+difficultyButtonsSound.forEach(button => {
+    button.addEventListener("mouseenter", () => {
+        hover.currentTime = 0.285
+        hover.play()
+    })
+})
+
 localStorage.clear()
 
 let nickname = document.querySelector(".nicknameInput")
