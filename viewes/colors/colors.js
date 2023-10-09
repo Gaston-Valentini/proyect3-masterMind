@@ -1,12 +1,11 @@
 let nickname = localStorage.getItem("nickname")
 let difficulty = localStorage.getItem("difficulty")
 let difficultyNum
+let quantity = document.querySelector(".quantity")
 
 let colorsSelection = document.querySelector(".colorsSelection")
 
 let colorsDelete = document.querySelector(".colorsDelete")
-
-let quantity = document.querySelector(".quantity")
 
 let colorsOptions = document.querySelector(".colorsOptions")
 let colorsOptionsColors = document.querySelectorAll(".colorsOptionsColor")
@@ -48,7 +47,7 @@ switch (difficulty) {
         break;
     case "X-RAYS":
         quantity.innerHTML = "8"
-        difficultyNum = 1
+        difficultyNum = 4
         colorsOptionsColors.forEach(button => {
             button.addEventListener("click", () => {
                 if (colorsSelection.childElementCount < 8) {
@@ -69,20 +68,24 @@ colorsDelete.addEventListener("click", () => {
 })
 
 colorsPlay.addEventListener("click", () => {
-    localStorage.clear()
-
     let colors = []
     const colorsSelectionToExport = colorsSelection.querySelectorAll("div")
     colorsSelectionToExport.forEach(e => {
         colors.push(window.getComputedStyle(e).backgroundColor)
     })
 
-    localStorage.setItem("info", JSON.stringify({
-        nickname,
-        difficulty,
-        difficultyNum,
-        quantity: quantity.innerHTML,
-        colors
-    }))
-    window.location.href = "../play/play.html"
+    if (quantity.innerHTML == colorsSelectionToExport.length) {
+        localStorage.setItem("nickname", JSON.stringify(nickname))
+        localStorage.setItem("difficulty", JSON.stringify(difficulty))
+        localStorage.setItem("difficultyNum", JSON.stringify(difficultyNum))
+        localStorage.setItem("quantity", JSON.stringify(quantity.innerHTML))
+        localStorage.setItem("colors", JSON.stringify(colors))
+        
+        window.location.href = "../play/play.html"
+    } else {
+        alert(`You must choose ${quantity.innerHTML} colors.`)
+    }
+
 })
+
+console.log(localStorage);

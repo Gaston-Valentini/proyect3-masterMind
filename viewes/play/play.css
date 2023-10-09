@@ -83,13 +83,21 @@
     gap: 1em;
 }
 
-.check, .delete {
+.check, .remove {
     padding: 0.5em;
+    background-color: transparent;
     border: 2px solid #fbff00;
     font-family: 'Press Start 2P', cursive;
 }
 
-.check:hover, .delete:hover {
+.check:hover, .remove:hover {
     cursor: pointer;
     background-color: #fbff00;
+}
+
+@media(max-width: 770px) {
+    .app {
+        height: 100%;
+        padding: 4em 0;
+    }
 }

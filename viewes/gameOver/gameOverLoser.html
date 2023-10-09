@@ -5,22 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Master Mind - By Gastón Valentini</title>
     <!-- stylesheet import -->
-    <link rel="stylesheet" href="./play.css">
+    <link rel="stylesheet" href="./gameOverLoser.css">
     <!-- importation of Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Tourney&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="app">
-        <div class="game">
-            <div class="board"></div>
-            <div class="colorPicker"></div>
-            <div class="buttons">
-                <button class="check" disabled>CHECK</button>
-                <button class="remove">DELETE</button>
+        <div class="container">
+            <div class="defeat">DEFEAT</div>
+            <div class="text">
+                Don't get discouraged <span class="user"></span>, you can play another game and try again
             </div>
+            <a href="../../index.html" class="playAgain">
+                Play Again
+            </a>
         </div>
     </div>
     
-    <script src="./play.js"></script>
+    <script src="./gameOverLoser.js"></script>
 </body>
 </html>
