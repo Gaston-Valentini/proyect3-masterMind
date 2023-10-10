@@ -3,7 +3,6 @@
 }
 
 .app {
-    height: 100vh;
     display: flex;
     justify-content: center;
     background: linear-gradient(to top right, #91C0DA, #6B6DE4, #AD8BA4);
